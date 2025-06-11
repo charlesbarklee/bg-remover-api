@@ -4,9 +4,8 @@ from fastapi.responses import FileResponse
 from rembg import remove
 from io import BytesIO
 
-app = FastAPI()  # ✅ This MUST be here
+app = FastAPI()
 
-# Enable CORS (important for browser access)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
